@@ -1,38 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  flex: 30%;
+  background-color: rgb(134, 183, 229);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header .inputContainer {
   display: flex;
   flex-direction: column;
+}
+
+.header input {
+  width: 200px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 1px solid gray;
+}
+
+.header input:first-child {
+  border-top-left-radius: 8px;
+  /* border-bottom-left-radius: 8px; */
+}
+
+.header input:last-child {
+  border-bottom-left-radius: 8px;
+}
+
+.header button {
+  width: 70px;
+  height: 84px;
+  cursor: pointer;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 1px solid gray;
+}
+
+.todoList {
+  flex: 70%;
+  width: 100%;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.task {
+  width: 50%;
+  height: 40px;
+  margin-top: 1rem;
+  background-color: rgba(174, 174, 174, 0.09);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  /* margin-left: 2rem; */
+}
+.content > span {
+  display: grid;
+  place-items: flex-start;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  border-right: none;
+}
+
+.task > button {
+  flex: 15%;
 }
